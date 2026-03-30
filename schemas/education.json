@@ -1,0 +1,51 @@
+{
+  "$ref": "#/definitions/education",
+  "definitions": {
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "institution": {
+            "type": "string"
+          },
+          "area": {
+            "type": "string"
+          },
+          "studyType": {
+            "type": "string"
+          },
+          "grade": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": [
+              "string",
+              "number"
+            ]
+          },
+          "endDate": {
+            "type": [
+              "string",
+              "number"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "institution",
+          "area",
+          "studyType",
+          "grade",
+          "startDate",
+          "endDate"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

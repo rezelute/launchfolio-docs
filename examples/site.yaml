@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rezelute/launchfolio-docs/main/schemas/site.json
+site:
+  name: Lori Rohan
+  strapline: voluptate
+  logo: comes
+meta:
+  title: U.S.A. Trilogy
+  description: 49-day aged chicken steak, with choice of 3 sides.
+  ogImage: sollicito
+footer: {}

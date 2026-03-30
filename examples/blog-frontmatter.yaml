@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rezelute/launchfolio-docs/main/schemas/blog-frontmatter.json
+title: The Complete Works of Edgar Allen Poe
+date: '2026-03-30'
+author: Walt Whitman
+excerpt: tabula
+tags:
+  - capto
+  - tempore
+  - tandem
+  - calculus
+cover: argumentum
+syndication:
+  - eveniet
+  - vester
+series:
+  slug: animus-curo-denuo
+  title: A Confederacy of Dunces
+  part: 1755271751783399

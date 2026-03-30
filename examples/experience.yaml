@@ -1,0 +1,121 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rezelute/launchfolio-docs/main/schemas/experience.json
+- id: comburo
+  type: employment
+  icon: summa
+  name: Rachael Bode
+  position: theca
+  location: sollers
+  remote: balbus
+  companySize: aspicio
+  companyType: soleo
+  reasonForLeaving: spargo
+  startDate: 4969-65
+  endDate: 3774-39
+  url: https://dazzling-singing.name
+  summary: qui
+  promotions:
+    - cornu
+    - cohaero
+    - creta
+    - expedita
+  technologies:
+    - coniuratio
+    - convoco
+    - pecto
+    - contra
+  highlights: &ref_0 {}
+- id: custodia
+  type: employment
+  icon: quae
+  name: Dr. Virgil Ledner Sr.
+  position: laboriosam
+  location: atque
+  remote: color
+  companySize: desidero
+  companyType: damnatio
+  reasonForLeaving: color
+  startDate: 4573-05
+  endDate: 1453-98
+  url: https://tragic-season.com/
+  summary: voluptatem
+  promotions:
+    - sumo
+    - dedecor
+    - depromo
+  technologies:
+    - admoveo
+    - conscendo
+  highlights:
+    management:
+      - administratio
+      - alius
+      - turbo
+      - aqua
+      - cogito
+    technical:
+      - cultellus
+      - absque
+      - desipio
+      - ullus
+    personal:
+      - audax
+      - damnatio
+      - tonsor
+- id: quis
+  type: sabbatical
+  icon: advenio
+  name: Deborah Bednar Jr.
+  position: xiphias
+  location: nostrum
+  remote: omnis
+  companySize: vere
+  companyType: taedium
+  reasonForLeaving: stillicidium
+  startDate: 3042-51
+  endDate: 3200-36
+  url: https://scented-challenge.org/
+  summary: odio
+  promotions:
+    - averto
+    - apud
+    - capto
+    - nostrum
+  technologies:
+    - distinctio
+    - natus
+  highlights: *ref_0
+- id: temptatio
+  type: sabbatical
+  icon: adficio
+  name: Cecelia Torp
+  position: apparatus
+  location: vel
+  remote: claro
+  companySize: pecco
+  companyType: celo
+  reasonForLeaving: valens
+  startDate: 8561-14
+  endDate: 0398-64
+  url: https://overdue-tapioca.name/
+  summary: aut
+  promotions:
+    - delibero
+  technologies:
+    - vindico
+    - crudelis
+  highlights:
+    management:
+      - libero
+      - derelinquo
+      - colo
+      - abduco
+    technical:
+      - cena
+      - bibo
+      - tenetur
+    personal:
+      - culpo
+      - supplanto
+      - tamen
+      - tero
+      - absconditus

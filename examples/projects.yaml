@@ -1,0 +1,95 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rezelute/launchfolio-docs/main/schemas/projects.json
+- id: admoneo
+  type: personal
+  icon: thymum
+  name: Mr. Eric McGlynn
+  startDate: 5478-59
+  endDate: 3928-53
+  description: >-
+    A special mint green carrot from Brunei Darussalam. To support the strong
+    flavor it is sided with a tablespoon of sesame seed.
+  highlights:
+    - desolo
+    - inventore
+    - vilicus
+    - arguo
+  technologies:
+    - decumbo
+  url: https://probable-replacement.name
+  repo: https://wealthy-airline.net
+  cover: vespillo
+  screenshots: &ref_0 []
+  relatedBlogs: &ref_1 []
+  client: sollicito
+  client_public: true
+  press:
+    - outlet: caterva
+      url: https://normal-gloom.name
+- id: curiositas
+  type: client
+  icon: casus
+  name: Sophie Kertzmann
+  startDate: 6200-60
+  endDate: 9359-23
+  description: >-
+    Grilled duck kebabs, marinated in Indian Chinese spices and served with a
+    fresh bean shoots and currant salad.
+  highlights:
+    - caecus
+    - atqui
+    - somnus
+    - bellicus
+    - dolore
+  technologies:
+    - cresco
+    - pecco
+    - correptius
+  url: https://ordinary-forgery.info
+  repo: https://showy-valley.biz/
+  cover: bonus
+  screenshots:
+    - cohibeo
+  relatedBlogs:
+    - recusandae
+    - vester
+    - sponte
+    - testimonium
+    - atrox
+  client: est
+  client_public: true
+  press:
+    - outlet: desino
+      url: https://whopping-sunbeam.net
+    - outlet: admoveo
+      url: https://concrete-king.name
+    - outlet: verbera
+      url: https://happy-armchair.org
+    - outlet: absum
+      url: https://wealthy-order.com
+- id: cruentus
+  type: client
+  icon: urbs
+  name: Lola Casper
+  startDate: 1571-40
+  endDate: 8879-74
+  description: A simple butternut pumpkin pie. No fancy stuff. Just pie.
+  highlights:
+    - antea
+    - pax
+    - provident
+  technologies:
+    - beatae
+    - vinitor
+    - varietas
+  url: https://slushy-pilot.org
+  repo: https://ashamed-import.com
+  cover: cruentus
+  screenshots: *ref_0
+  relatedBlogs: *ref_1
+  client: thymum
+  client_public: false
+  press:
+    - outlet: titulus
+      url: https://frequent-wilderness.com/
+    - outlet: absconditus
+      url: https://quick-yogurt.org/
