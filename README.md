@@ -2,11 +2,6 @@
 
 Launchfolio is a self-hostable personal portfolio, blog, and CV app. The core idea is simple: **you bring the data, Launchfolio renders it**. Your content lives in a `persona-data` directory you control - YAML files, blog posts, and images. The app reads from it without you ever needing to touch application code.
 
-```
-persona-data/ ← your content (edit this freely)
-launchfolio/ ← the app (leave alone)
-```
-
 Everything you need to customise the image is exposed through your `persona-data` directory and environment variables.
 
 ---
@@ -47,16 +42,16 @@ Each YAML file has a defined schema that is validated at server startup. If a fi
 
 Full JSON schemas and example YAML files are in this repository:
 
-| File | Schema | Example |
-| ---- | ------ | ------- |
-| `basics.yaml` | [schemas/basics.json](schemas/basics.json) | [examples/basics.yaml](examples/basics.yaml) |
-| `site.yaml` | [schemas/site.json](schemas/site.json) | [examples/site.yaml](examples/site.yaml) |
-| `education.yaml` | [schemas/education.json](schemas/education.json) | [examples/education.yaml](examples/education.yaml) |
-| `experience.yaml` | [schemas/experience.json](schemas/experience.json) | [examples/experience.yaml](examples/experience.yaml) |
-| `interests.yaml` | [schemas/interests.json](schemas/interests.json) | [examples/interests.yaml](examples/interests.yaml) |
-| `projects.yaml` | [schemas/projects.json](schemas/projects.json) | [examples/projects.yaml](examples/projects.yaml) |
-| `cv-variants.yaml` | [schemas/cv-variants.json](schemas/cv-variants.json) | [examples/cv-variants.yaml](examples/cv-variants.yaml) |
-| Blog frontmatter | [schemas/blog-frontmatter.json](schemas/blog-frontmatter.json) | [examples/blog-frontmatter.yaml](examples/blog-frontmatter.yaml) |
+| File               | Schema                                                         | Example                                                          |
+| ------------------ | -------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `basics.yaml`      | [schemas/basics.json](schemas/basics.json)                     | [examples/basics.yaml](examples/basics.yaml)                     |
+| `site.yaml`        | [schemas/site.json](schemas/site.json)                         | [examples/site.yaml](examples/site.yaml)                         |
+| `education.yaml`   | [schemas/education.json](schemas/education.json)               | [examples/education.yaml](examples/education.yaml)               |
+| `experience.yaml`  | [schemas/experience.json](schemas/experience.json)             | [examples/experience.yaml](examples/experience.yaml)             |
+| `interests.yaml`   | [schemas/interests.json](schemas/interests.json)               | [examples/interests.yaml](examples/interests.yaml)               |
+| `projects.yaml`    | [schemas/projects.json](schemas/projects.json)                 | [examples/projects.yaml](examples/projects.yaml)                 |
+| `cv-variants.yaml` | [schemas/cv-variants.json](schemas/cv-variants.json)           | [examples/cv-variants.yaml](examples/cv-variants.yaml)           |
+| Blog frontmatter   | [schemas/blog-frontmatter.json](schemas/blog-frontmatter.json) | [examples/blog-frontmatter.yaml](examples/blog-frontmatter.yaml) |
 
 If your editor supports the [yaml-language-server](https://github.com/redhat-developer/yaml-language-server), add a schema comment to the top of each file for inline validation and autocompletion:
 
