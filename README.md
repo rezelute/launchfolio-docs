@@ -45,6 +45,25 @@ persona-data/
 
 Each YAML file has a defined schema that is validated at server startup. If a file fails validation, the server will refuse to start and print the exact field errors to the console - so you'll know immediately what to fix.
 
+Full JSON schemas and example YAML files are in this repository:
+
+| File | Schema | Example |
+| ---- | ------ | ------- |
+| `basics.yaml` | [schemas/basics.json](schemas/basics.json) | [examples/basics.yaml](examples/basics.yaml) |
+| `site.yaml` | [schemas/site.json](schemas/site.json) | [examples/site.yaml](examples/site.yaml) |
+| `education.yaml` | [schemas/education.json](schemas/education.json) | [examples/education.yaml](examples/education.yaml) |
+| `experience.yaml` | [schemas/experience.json](schemas/experience.json) | [examples/experience.yaml](examples/experience.yaml) |
+| `interests.yaml` | [schemas/interests.json](schemas/interests.json) | [examples/interests.yaml](examples/interests.yaml) |
+| `projects.yaml` | [schemas/projects.json](schemas/projects.json) | [examples/projects.yaml](examples/projects.yaml) |
+| `cv-variants.yaml` | [schemas/cv-variants.json](schemas/cv-variants.json) | [examples/cv-variants.yaml](examples/cv-variants.yaml) |
+| Blog frontmatter | [schemas/blog-frontmatter.json](schemas/blog-frontmatter.json) | [examples/blog-frontmatter.yaml](examples/blog-frontmatter.yaml) |
+
+If your editor supports the [yaml-language-server](https://github.com/redhat-developer/yaml-language-server), add a schema comment to the top of each file for inline validation and autocompletion:
+
+```yaml
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rezelute/launchfolio-docs/main/schemas/basics.json
+```
+
 ---
 
 ## Running with Docker
@@ -100,7 +119,8 @@ author: Your Name
 excerpt: A short description shown on the blog listing page.
 tags: [tag-one, tag-two]
 cover: /img/blogs/my-post-cover.webp
-canonical: null
+syndication:
+  - https://dev.to/your-post
 series:
   slug: my-series
   title: My Series Title
@@ -115,9 +135,10 @@ Post content here...
 A few things to note:
 
 **Always quote the date field** ("2025-03-15"). Unquoted ISO dates are valid YAML date literals and will cause a validation error.
-cover, canonical, and series are all optional.
 
-`canonical` is useful if you're cross-posting from another platform - it sets the canonical URL for SEO.
+`cover`, `syndication`, and `series` are all optional.
+
+`syndication` is a list of URLs where the post has been cross-posted (e.g. dev.to, Hashnode). Omit or set to `null` if not applicable.
 
 Posts with invalid frontmatter are silently skipped with a warning in the server logs rather than crashing the server.
 
