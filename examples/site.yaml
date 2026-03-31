@@ -1,10 +1,17 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rezelute/launchfolio-docs/main/schemas/site.json
+
 site:
-  name: Lori Rohan
-  strapline: voluptate
-  logo: comes
+  name: "Jane Doe"
+  strapline: "Full stack engineer building fast, accessible web applications for people and planet."
+  logo: /img/sitelogo.svg
 meta:
-  title: U.S.A. Trilogy
-  description: 49-day aged chicken steak, with choice of 3 sides.
-  ogImage: sollicito
-footer: {}
+  title: "Jane Doe - Full Stack Engineer"
+  description: "Portfolio and blog of Jane Doe, a full stack engineer building fast, accessible web applications."
+  ogImage: /img/og-image.webp
+footer:
+  privacyNotice: "This site uses privacy-first, cookie-free analytics. No personal data is collected or shared."
+  tags:
+    - "Open source"
+    - "Accessibility"
+    - "Web performance"
+    - "TypeScript"

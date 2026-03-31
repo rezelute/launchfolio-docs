@@ -1,29 +1,9 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rezelute/launchfolio-docs/main/schemas/education.json
-- id: centum
-  institution: compono
-  area: convoco
-  studyType: apto
-  grade: conitor
-  startDate: perspiciatis
-  endDate: harum
-- id: surgo
-  institution: comitatus
-  area: vere
-  studyType: deleniti
-  grade: molestias
-  startDate: 7438759447194583
-  endDate: 1810614431967359
-- id: consectetur
-  institution: utilis
-  area: cohors
-  studyType: tredecim
-  grade: truculenter
-  startDate: 5857870603664234
-  endDate: utroque
-- id: suus
-  institution: traho
-  area: quos
-  studyType: copiose
-  grade: adstringo
-  startDate: adaugeo
-  endDate: ago
+
+- id: bsc-computer-science
+  institution: University of Example
+  area: Computer Science
+  studyType: BSc
+  grade: First Class Honours
+  startDate: 2011
+  endDate: 2014

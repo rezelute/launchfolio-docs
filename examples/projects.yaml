@@ -1,95 +1,37 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rezelute/launchfolio-docs/main/schemas/projects.json
-- id: admoneo
+
+- id: my-portfolio
   type: personal
-  icon: thymum
-  name: Mr. Eric McGlynn
-  startDate: 5478-59
-  endDate: 3928-53
-  description: >-
-    A special mint green carrot from Brunei Darussalam. To support the strong
-    flavor it is sided with a tablespoon of sesame seed.
+  icon: "fa-solid fa-file-lines"
+  name: My Portfolio
+  startDate: 2025-01
+  endDate: 2025-02
+  description: "Open source personal site with CV, portfolio, and blog"
   highlights:
-    - desolo
-    - inventore
-    - vilicus
-    - arguo
-  technologies:
-    - decumbo
-  url: https://probable-replacement.name
-  repo: https://wealthy-airline.net
-  cover: vespillo
-  screenshots: &ref_0 []
-  relatedBlogs: &ref_1 []
-  client: sollicito
-  client_public: true
-  press:
-    - outlet: caterva
-      url: https://normal-gloom.name
-- id: curiositas
-  type: client
-  icon: casus
-  name: Sophie Kertzmann
-  startDate: 6200-60
-  endDate: 9359-23
-  description: >-
-    Grilled duck kebabs, marinated in Indian Chinese spices and served with a
-    fresh bean shoots and currant salad.
-  highlights:
-    - caecus
-    - atqui
-    - somnus
-    - bellicus
-    - dolore
-  technologies:
-    - cresco
-    - pecco
-    - correptius
-  url: https://ordinary-forgery.info
-  repo: https://showy-valley.biz/
-  cover: bonus
-  screenshots:
-    - cohibeo
+    - "Built a self-hostable portfolio site with a YAML-driven content model, making it easy for others to fork and customise."
+  technologies: [nuxt, typescript, tailwind, docker]
+  url: https://www.janedoe.example
+  repo: https://github.com/janedoe/portfolio
   relatedBlogs:
-    - recusandae
-    - vester
-    - sponte
-    - testimonium
-    - atrox
-  client: est
-  client_public: true
-  press:
-    - outlet: desino
-      url: https://whopping-sunbeam.net
-    - outlet: admoveo
-      url: https://concrete-king.name
-    - outlet: verbera
-      url: https://happy-armchair.org
-    - outlet: absum
-      url: https://wealthy-order.com
-- id: cruentus
+    - getting-started-with-self-hosting
+  cover: /img/projects/portfolio/cover.webp
+
+- id: charity-dashboard
   type: client
-  icon: urbs
-  name: Lola Casper
-  startDate: 1571-40
-  endDate: 8879-74
-  description: A simple butternut pumpkin pie. No fancy stuff. Just pie.
+  icon: "fa-solid fa-chart-line"
+  name: "Impact Dashboard"
+  client: "Green Future Foundation"
+  client_public: true
+  startDate: 2024-06
+  endDate: 2024-09
+  description: "Data visualisation dashboard showing charity impact metrics for donors and stakeholders."
   highlights:
-    - antea
-    - pax
-    - provident
-  technologies:
-    - beatae
-    - vinitor
-    - varietas
-  url: https://slushy-pilot.org
-  repo: https://ashamed-import.com
-  cover: cruentus
-  screenshots: *ref_0
-  relatedBlogs: *ref_1
-  client: thymum
-  client_public: false
-  press:
-    - outlet: titulus
-      url: https://frequent-wilderness.com/
-    - outlet: absconditus
-      url: https://quick-yogurt.org/
+    - "Built an interactive dashboard pulling data from a REST API and displaying real-time impact metrics."
+    - "Ensured full keyboard and screen reader accessibility throughout."
+  technologies: [vue-3, typescript, chartjs, tailwind]
+  url: null
+  repo: null
+  relatedBlogs: []
+  cover: /img/projects/charity-dashboard/cover.webp
+  screenshots:
+    - /img/projects/charity-dashboard/screenshot-1.webp

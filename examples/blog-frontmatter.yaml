@@ -1,18 +1,11 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rezelute/launchfolio-docs/main/schemas/blog-frontmatter.json
-title: The Complete Works of Edgar Allen Poe
-date: '2026-03-30'
-author: Walt Whitman
-excerpt: tabula
+
+title: "Getting Started with Self-Hosting"
+date: "2025-03-15"
+author: "Jane Doe"
+excerpt: "A practical guide to running your own services at home, starting with the essentials and why it matters for your privacy."
 tags:
-  - capto
-  - tempore
-  - tandem
-  - calculus
-cover: argumentum
-syndication:
-  - eveniet
-  - vester
-series:
-  slug: animus-curo-denuo
-  title: A Confederacy of Dunces
-  part: 1755271751783399
+  - self-hosting
+  - privacy
+  - linux
+cover: /img/blogs/self-hosting.webp

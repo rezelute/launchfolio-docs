@@ -1,70 +1,33 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rezelute/launchfolio-docs/main/schemas/cv-variants.json
-- id: nostrum
-  title: Oscar and Lucinda
-  tagline: traho
-  summary: tamisium
-  sections:
-    - education
-    - experience:
-        include:
-          - nostrum
-        highlight_groups:
-          - group: atrocitas
-            limit: 627812905765891
-          - group: arbustum
-            limit: 6050154664546312
-          - group: dolorem
-            limit: 1038677737037901
-- id: aduro
-  title: The King in Yellow
-  tagline: bos
-  summary: vinum
-  sections:
-    - projects:
-        include:
-          - suffragium
-          - soluta
-          - quae
-          - dignissimos
-    - experience:
-        include:
-          - virtus
-        highlight_groups:
-          - group: denique
-            limit: 182004810054062
-          - group: quidem
-            limit: 8529817611199012
-          - group: vigilo
-            limit: 8776529914294123
-          - group: virtus
-            limit: 4170539002166890
-- id: creo
-  title: Walden
-  tagline: terebro
-  summary: odio
+
+- id: cv-fullstack
+  title: Full Stack Engineer
+  tagline: "Full stack engineer across Vue, Nuxt, Node, and Postgres"
+  summary: "Full stack engineer with 10+ years of experience building production web applications across the whole stack. Strong frontend bias with solid backend experience in Node and Postgres."
   sections:
     - summary
+    - projects:
+        include: [my-portfolio, charity-dashboard]
+    - experience:
+        include: [acme-corp, career-break-2025]
+        highlight_groups:
+          - group: technical
+          - group: management
+            limit: 2
+          - group: personal
+    - education
+
+- id: cv-frontend
+  title: Frontend Engineer
+  tagline: "Vue/Nuxt specialist focused on performance and accessibility"
+  summary: "Frontend engineer specialising in Vue 3 and Nuxt, with a track record of building performant, accessible UIs and design systems."
+  sections:
     - summary
     - projects:
-        include:
-          - vicissitudo
-- id: suscipit
-  title: Life of Pi
-  tagline: candidus
-  summary: utique
-  sections:
-    - education
-    - education
-    - education
+        include: [my-portfolio, charity-dashboard]
     - experience:
-        include:
-          - cruciamentum
-          - thesis
-          - degusto
-          - arca
-          - cunctatio
+        include: [acme-corp, career-break-2025]
         highlight_groups:
-          - group: utroque
-            limit: 5329224527747386
-          - group: cuius
-            limit: 6775012923416669
+          - group: technical
+          - group: personal
+    - education

@@ -1,69 +1,17 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rezelute/launchfolio-docs/main/schemas/interests.json
-- id: caterva
-  icon: annus
-  title: Alice's Adventures in Wonderland
-  summary: thymum
-  url: https://avaricious-technician.info/
+
+- id: open-source
+  icon: "fa-brands fa-github"
+  title: Open Source
+  summary: "Believe the best software is built collaboratively. Regularly contribute to open source projects and maintain a small component library used by the community."
   relatedProjects:
-    - confero
-    - facilis
-    - quis
-    - velit
+    - my-component-library
   relatedBlogs:
-    - cohors
-    - termes
-    - solvo
-    - asperiores
-- id: absens
-  icon: sequi
-  title: The Fountainhead
-  summary: vapulus
-  url: https://expensive-begonia.net
-  relatedProjects:
-    - derideo
-  relatedBlogs:
-    - crapula
-    - cernuus
-    - atqui
-    - amo
-    - vita
-- id: territo
-  icon: comitatus
-  title: U.S.A. Trilogy
-  summary: validus
-  url: https://long-term-pants.net
-  relatedProjects:
-    - nemo
-  relatedBlogs:
-    - aspicio
-    - tabernus
-    - demo
-    - sumo
-    - virgo
-- id: animadverto
-  icon: tergum
-  title: A Brief History of Time
-  summary: socius
-  url: https://likable-fuel.info
-  relatedProjects:
-    - dolor
-    - eaque
-    - somniculosus
-    - aequitas
-  relatedBlogs:
-    - comes
-    - clarus
-    - alter
-    - amoveo
-    - necessitatibus
-- id: quasi
-  icon: testimonium
-  title: The War of the Worlds
-  summary: tametsi
-  url: https://bouncy-discourse.com/
-  relatedProjects:
-    - praesentium
-  relatedBlogs:
-    - tantillus
-    - tunc
-    - textor
+    - why-i-contribute-to-open-source
+
+- id: accessibility
+  icon: "fa-solid fa-universal-access"
+  title: Web Accessibility
+  summary: "Advocate for accessible web experiences. Screen reader testing and WCAG compliance are a core part of how I build, not an afterthought."
+  relatedProjects: null
+  relatedBlogs: null

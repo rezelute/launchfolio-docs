@@ -1,121 +1,47 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rezelute/launchfolio-docs/main/schemas/experience.json
-- id: comburo
+
+- id: acme-corp
   type: employment
-  icon: summa
-  name: Rachael Bode
-  position: theca
-  location: sollers
-  remote: balbus
-  companySize: aspicio
-  companyType: soleo
-  reasonForLeaving: spargo
-  startDate: 4969-65
-  endDate: 3774-39
-  url: https://dazzling-singing.name
-  summary: qui
+  icon: "fa-solid fa-briefcase"
+  name: "Acme Corp"
+  position: Senior Frontend Engineer
+  location: London, UK
+  remote: hybrid
+  companySize: startup
+  companyType: saas
+  reasonForLeaving: null
+  startDate: 2021-03
+  endDate: 2024-12
+  url: null
+  summary: "Led frontend development of the core product dashboard, improving performance and developer experience across a team of four engineers."
   promotions:
-    - cornu
-    - cohaero
-    - creta
-    - expedita
-  technologies:
-    - coniuratio
-    - convoco
-    - pecto
-    - contra
-  highlights: &ref_0 {}
-- id: custodia
-  type: employment
-  icon: quae
-  name: Dr. Virgil Ledner Sr.
-  position: laboriosam
-  location: atque
-  remote: color
-  companySize: desidero
-  companyType: damnatio
-  reasonForLeaving: color
-  startDate: 4573-05
-  endDate: 1453-98
-  url: https://tragic-season.com/
-  summary: voluptatem
-  promotions:
-    - sumo
-    - dedecor
-    - depromo
-  technologies:
-    - admoveo
-    - conscendo
+    - Frontend Engineer
+    - Senior Frontend Engineer
+  technologies: [vue-3, typescript, tailwind, vitest, figma]
   highlights:
-    management:
-      - administratio
-      - alius
-      - turbo
-      - aqua
-      - cogito
     technical:
-      - cultellus
-      - absque
-      - desipio
-      - ullus
-    personal:
-      - audax
-      - damnatio
-      - tonsor
-- id: quis
+      - "Rebuilt the main dashboard with Vue 3 and the Composition API, cutting initial load time by 40%."
+      - "Established a component library used across three product teams."
+    management:
+      - "Mentored two junior engineers through structured feedback and pair programming."
+
+- id: career-break-2025
   type: sabbatical
-  icon: advenio
-  name: Deborah Bednar Jr.
-  position: xiphias
-  location: nostrum
-  remote: omnis
-  companySize: vere
-  companyType: taedium
-  reasonForLeaving: stillicidium
-  startDate: 3042-51
-  endDate: 3200-36
-  url: https://scented-challenge.org/
-  summary: odio
-  promotions:
-    - averto
-    - apud
-    - capto
-    - nostrum
-  technologies:
-    - distinctio
-    - natus
-  highlights: *ref_0
-- id: temptatio
-  type: sabbatical
-  icon: adficio
-  name: Cecelia Torp
-  position: apparatus
-  location: vel
-  remote: claro
-  companySize: pecco
-  companyType: celo
-  reasonForLeaving: valens
-  startDate: 8561-14
-  endDate: 0398-64
-  url: https://overdue-tapioca.name/
-  summary: aut
-  promotions:
-    - delibero
-  technologies:
-    - vindico
-    - crudelis
+  icon: "fa-solid fa-tree"
+  name: "Career Break"
+  position: null
+  location: null
+  remote: null
+  companySize: null
+  companyType: null
+  reasonForLeaving: null
+  startDate: 2025-01
+  endDate: 2025-06
+  url: null
+  summary: "Took time off to travel, contribute to open source, and build personal projects."
+  promotions: null
+  technologies: [nuxt, docker, postgres]
   highlights:
-    management:
-      - libero
-      - derelinquo
-      - colo
-      - abduco
-    technical:
-      - cena
-      - bibo
-      - tenetur
     personal:
-      - culpo
-      - supplanto
-      - tamen
-      - tero
-      - absconditus
+      - "Contributed to two open source projects."
+      - "Built and launched a personal finance tracker as a side project."
