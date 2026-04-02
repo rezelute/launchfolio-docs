@@ -1,4 +1,6 @@
 ## What is Launchfolio?
+![app](https://github.com/user-attachments/assets/f503140d-a29a-43f3-b535-c114c62dba9c)
+
 
 Launchfolio is a self-hostable personal portfolio, blog, and CV app. The core idea is simple: **you bring the data, Launchfolio renders it**. Your content lives in a `persona-data` directory you control - YAML files, blog posts, and images. The app reads from it without you ever needing to touch application code.
 
