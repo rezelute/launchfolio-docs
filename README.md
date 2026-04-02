@@ -102,6 +102,8 @@ YAML files are loaded once at server startup. The app reads every YAML file, val
 
 Images are served through the IPX image optimizer, which resizes and caches images on first request. New image files appear immediately without a restart.
 
+**Theme colours (`PRIMARY_COLOR`, `SECONDARY_COLOR`) require a full rebuild.** These are baked into the CSS bundle at build time (used to generate the PrimeVue theme preset and Tailwind utility classes). Changing them in `.env` and restarting the container is not enough — you must rebuild the image. A page refresh or container restart will not pick up colour changes.
+
 ## Writing Blog Posts
 
 Blog posts are Markdown files in your `blogs/` directory with YAML frontmatter:
@@ -174,4 +176,5 @@ No uploads or CDN required - images are served directly from your mounted volume
 | Add or edit a blog post | Drop the `.md` file in `blogs/`, refresh the browser             |
 | Add or replace an image | Copy the file into `img/`, refresh the browser                   |
 | Change configuration    | Update environment variables, restart the container              |
+| Change theme colours    | Update `PRIMARY_COLOR` / `SECONDARY_COLOR`, **rebuild the image** (restart alone is not enough) |
 | Debug validation errors | Check container logs on startup - exact field errors are printed |
