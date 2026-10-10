@@ -9,25 +9,26 @@
     - projects:
         include: [my-portfolio, charity-dashboard]
     - experience:
-        include: [acme-corp, career-break-2025]
-        highlight_groups:
-          - group: technical
-          - group: management
-            limit: 2
-          - group: personal
+        # A plain id shows all highlights; a list shows only those, in order
+        include:
+          - acme-corp
+          - career-break-2025
     - education
 
 - id: cv-frontend
+  # Hidden from the footer, but still reachable at /cv/cv-frontend
+  listed: false
   title: Frontend Engineer
   tagline: "Vue/Nuxt specialist focused on performance and accessibility"
   summary: "Frontend engineer specialising in Vue 3 and Nuxt, with a track record of building performant, accessible UIs and design systems."
   sections:
     - summary
     - projects:
-        include: [my-portfolio, charity-dashboard]
+        include:
+          - my-portfolio
+          - charity-dashboard: [accessibility]
     - experience:
-        include: [acme-corp, career-break-2025]
-        highlight_groups:
-          - group: technical
-          - group: personal
+        include:
+          - acme-corp: [dashboard-rebuild, component-library]
+          - career-break-2025
     - education

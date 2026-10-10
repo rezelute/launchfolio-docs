@@ -1,74 +1,70 @@
 {
-  "$ref": "#/definitions/basics",
-  "definitions": {
-    "basics": {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "location": {
       "type": "object",
       "properties": {
-        "name": {
+        "city": {
           "type": "string"
         },
-        "label": {
+        "countryCode": {
           "type": "string"
-        },
-        "summary": {
-          "type": "string"
-        },
-        "image": {
-          "type": "string"
-        },
-        "url": {
-          "type": "string",
-          "format": "uri"
-        },
-        "location": {
-          "type": "object",
-          "properties": {
-            "city": {
-              "type": "string"
-            },
-            "countryCode": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "city",
-            "countryCode"
-          ],
-          "additionalProperties": false
-        },
-        "profiles": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "network": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "network",
-              "username",
-              "url"
-            ],
-            "additionalProperties": false
-          },
-          "default": []
         }
       },
       "required": [
-        "name",
-        "label",
-        "location"
+        "city",
+        "countryCode"
       ],
       "additionalProperties": false
+    },
+    "profiles": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "network": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "network",
+          "username",
+          "url"
+        ],
+        "additionalProperties": false
+      }
     }
   },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+  "required": [
+    "name",
+    "label",
+    "location",
+    "profiles"
+  ],
+  "additionalProperties": false
 }

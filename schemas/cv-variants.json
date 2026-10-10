@@ -1,117 +1,143 @@
 {
-  "$ref": "#/definitions/cv-variants",
-  "definitions": {
-    "cv-variants": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "tagline": {
-            "type": "string"
-          },
-          "summary": {
-            "type": "string"
-          },
-          "sections": {
-            "type": "array",
-            "items": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "const": "summary"
-                },
-                {
-                  "type": "string",
-                  "const": "education"
-                },
-                {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "listed": {
+        "default": true,
+        "type": "boolean"
+      },
+      "title": {
+        "type": "string"
+      },
+      "tagline": {
+        "type": "string"
+      },
+      "summary": {
+        "type": "string"
+      },
+      "sections": {
+        "type": "array",
+        "items": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "summary"
+            },
+            {
+              "type": "string",
+              "const": "education"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "projects": {
                   "type": "object",
                   "properties": {
-                    "projects": {
-                      "type": "object",
-                      "properties": {
-                        "include": {
-                          "type": "array",
-                          "items": {
+                    "include": {
+                      "type": "array",
+                      "items": {
+                        "anyOf": [
+                          {
                             "type": "string"
-                          }
-                        }
-                      },
-                      "required": [
-                        "include"
-                      ],
-                      "additionalProperties": false
-                    }
-                  },
-                  "required": [
-                    "projects"
-                  ],
-                  "additionalProperties": false
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "experience": {
-                      "type": "object",
-                      "properties": {
-                        "include": {
-                          "type": "array",
-                          "items": {
-                            "type": "string"
-                          }
-                        },
-                        "highlight_groups": {
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "properties": {
-                              "group": {
-                                "type": "string"
-                              },
-                              "limit": {
-                                "type": "integer",
-                                "minimum": 1
-                              }
-                            },
-                            "required": [
-                              "group"
-                            ],
-                            "additionalProperties": false
                           },
-                          "minItems": 1
-                        }
-                      },
-                      "required": [
-                        "highlight_groups"
-                      ],
-                      "additionalProperties": false
+                          {
+                            "type": "object",
+                            "propertyNames": {
+                              "type": "string"
+                            },
+                            "additionalProperties": {
+                              "anyOf": [
+                                {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string"
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
                     }
                   },
                   "required": [
-                    "experience"
+                    "include"
                   ],
                   "additionalProperties": false
                 }
-              ]
+              },
+              "required": [
+                "projects"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "experience": {
+                  "type": "object",
+                  "properties": {
+                    "include": {
+                      "type": "array",
+                      "items": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "object",
+                            "propertyNames": {
+                              "type": "string"
+                            },
+                            "additionalProperties": {
+                              "anyOf": [
+                                {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string"
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "include"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "experience"
+              ],
+              "additionalProperties": false
             }
-          }
-        },
-        "required": [
-          "id",
-          "title",
-          "tagline",
-          "summary",
-          "sections"
-        ],
-        "additionalProperties": false
+          ]
+        }
       }
-    }
-  },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "required": [
+      "id",
+      "listed",
+      "title",
+      "tagline",
+      "summary",
+      "sections"
+    ],
+    "additionalProperties": false
+  }
 }

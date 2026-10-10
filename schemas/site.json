@@ -1,73 +1,73 @@
 {
-  "$ref": "#/definitions/site",
-  "definitions": {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
     "site": {
       "type": "object",
       "properties": {
-        "site": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "strapline": {
-              "type": "string"
-            },
-            "logo": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "name",
-            "strapline"
-          ],
-          "additionalProperties": false
+        "name": {
+          "type": "string"
         },
-        "meta": {
-          "type": "object",
-          "properties": {
-            "title": {
-              "type": "string"
-            },
-            "description": {
-              "type": "string"
-            },
-            "ogImage": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "title",
-            "description"
-          ],
-          "additionalProperties": false
+        "strapline": {
+          "type": "string"
         },
-        "footer": {
-          "type": "object",
-          "properties": {
-            "privacyNotice": {
-              "type": [
-                "string",
-                "null"
-              ]
-            },
-            "tags": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          },
-          "additionalProperties": false,
-          "default": {}
+        "logo": {
+          "type": "string"
         }
       },
       "required": [
-        "site",
-        "meta"
+        "name",
+        "strapline"
       ],
+      "additionalProperties": false
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "ogImage": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "description"
+      ],
+      "additionalProperties": false
+    },
+    "footer": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "privacyNotice": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
       "additionalProperties": false
     }
   },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+  "required": [
+    "site",
+    "meta",
+    "footer"
+  ],
+  "additionalProperties": false
 }

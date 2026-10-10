@@ -1,51 +1,54 @@
 {
-  "$ref": "#/definitions/education",
-  "definitions": {
-    "education": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "institution": {
+        "type": "string"
+      },
+      "area": {
+        "type": "string"
+      },
+      "studyType": {
+        "type": "string"
+      },
+      "grade": {
+        "type": "string"
+      },
+      "startDate": {
+        "anyOf": [
+          {
             "type": "string"
           },
-          "institution": {
-            "type": "string"
-          },
-          "area": {
-            "type": "string"
-          },
-          "studyType": {
-            "type": "string"
-          },
-          "grade": {
-            "type": "string"
-          },
-          "startDate": {
-            "type": [
-              "string",
-              "number"
-            ]
-          },
-          "endDate": {
-            "type": [
-              "string",
-              "number"
-            ]
+          {
+            "type": "number"
           }
-        },
-        "required": [
-          "id",
-          "institution",
-          "area",
-          "studyType",
-          "grade",
-          "startDate",
-          "endDate"
-        ],
-        "additionalProperties": false
+        ]
+      },
+      "endDate": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
       }
-    }
-  },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "required": [
+      "id",
+      "institution",
+      "area",
+      "studyType",
+      "grade",
+      "startDate",
+      "endDate"
+    ],
+    "additionalProperties": false
+  }
 }

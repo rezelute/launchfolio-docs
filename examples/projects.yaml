@@ -8,7 +8,8 @@
   endDate: 2025-02
   description: "Open source personal site with CV, portfolio, and blog"
   highlights:
-    - "Built a self-hostable portfolio site with a YAML-driven content model, making it easy for others to fork and customise."
+    - id: self-hostable
+      text: "Built a self-hostable portfolio site with a YAML-driven content model, making it easy for others to fork and customise."
   technologies: [nuxt, typescript, tailwind, docker]
   url: https://www.janedoe.example
   repo: https://github.com/janedoe/portfolio
@@ -26,8 +27,10 @@
   endDate: 2024-09
   description: "Data visualisation dashboard showing charity impact metrics for donors and stakeholders."
   highlights:
-    - "Built an interactive dashboard pulling data from a REST API and displaying real-time impact metrics."
-    - "Ensured full keyboard and screen reader accessibility throughout."
+    - id: live-metrics
+      text: "Built an interactive dashboard pulling data from a REST API and displaying real-time impact metrics."
+    - id: accessibility
+      text: "Ensured full keyboard and screen reader accessibility throughout."
   technologies: [vue-3, typescript, chartjs, tailwind]
   url: null
   repo: null

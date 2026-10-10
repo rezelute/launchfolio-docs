@@ -1,143 +1,160 @@
 {
-  "$ref": "#/definitions/projects",
-  "definitions": {
-    "projects": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "type": {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string",
+        "enum": [
+          "personal",
+          "client"
+        ]
+      },
+      "icon": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "startDate": {
+        "type": "string",
+        "pattern": "^\\d{4}-\\d{2}$"
+      },
+      "endDate": {
+        "anyOf": [
+          {
             "type": "string",
-            "enum": [
-              "personal",
-              "client"
-            ]
+            "pattern": "^\\d{4}-\\d{2}$"
           },
-          "icon": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "startDate": {
-            "type": "string",
-            "pattern": "^\\d{4}-\\d{2}$",
-            "errorMessage": {
-              "pattern": "Must be YYYY-MM"
-            }
-          },
-          "endDate": {
-            "anyOf": [
-              {
-                "type": "string",
-                "pattern": "^\\d{4}-\\d{2}$",
-                "errorMessage": {
-                  "pattern": "Must be YYYY-MM"
-                }
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "description": {
-            "type": "string"
-          },
-          "highlights": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "minItems": 1
-          },
-          "technologies": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "url": {
-            "anyOf": [
-              {
-                "type": "string",
-                "format": "uri"
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "repo": {
-            "anyOf": [
-              {
-                "type": "string",
-                "format": "uri"
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "cover": {
-            "type": "string"
-          },
-          "screenshots": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "default": []
-          },
-          "relatedBlogs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "default": []
-          },
-          "client": {
-            "type": "string"
-          },
-          "client_public": {
-            "type": "boolean"
-          },
-          "press": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "outlet": {
-                  "type": "string"
-                },
-                "url": {
-                  "type": "string",
-                  "format": "uri"
-                }
-              },
-              "required": [
-                "outlet",
-                "url"
-              ],
-              "additionalProperties": false
-            }
+          {
+            "type": "null"
           }
-        },
-        "required": [
-          "id",
-          "type",
-          "icon",
-          "name",
-          "startDate",
-          "description",
-          "highlights",
-          "technologies"
-        ],
-        "additionalProperties": false
+        ]
+      },
+      "description": {
+        "type": "string"
+      },
+      "highlights": {
+        "minItems": 1,
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "management",
+                  "technical",
+                  "personal"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "text"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "technologies": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "url": {
+        "anyOf": [
+          {
+            "type": "string",
+            "format": "uri"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "repo": {
+        "anyOf": [
+          {
+            "type": "string",
+            "format": "uri"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "cover": {
+        "type": "string"
+      },
+      "screenshots": {
+        "default": [],
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "relatedBlogs": {
+        "default": [],
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "client": {
+        "type": "string"
+      },
+      "client_public": {
+        "type": "boolean"
+      },
+      "press": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "outlet": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "outlet",
+            "url"
+          ],
+          "additionalProperties": false
+        }
       }
-    }
-  },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "required": [
+      "id",
+      "type",
+      "icon",
+      "name",
+      "startDate",
+      "description",
+      "highlights",
+      "technologies",
+      "screenshots",
+      "relatedBlogs"
+    ],
+    "additionalProperties": false
+  }
 }

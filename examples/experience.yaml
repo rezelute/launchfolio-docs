@@ -19,11 +19,15 @@
     - Senior Frontend Engineer
   technologies: [vue-3, typescript, tailwind, vitest, figma]
   highlights:
-    technical:
-      - "Rebuilt the main dashboard with Vue 3 and the Composition API, cutting initial load time by 40%."
-      - "Established a component library used across three product teams."
-    management:
-      - "Mentored two junior engineers through structured feedback and pair programming."
+    - id: dashboard-rebuild
+      tags: [technical]
+      text: "Rebuilt the main dashboard with Vue 3 and the Composition API, cutting initial load time by 40%."
+    - id: component-library
+      tags: [technical]
+      text: "Established a component library used across three product teams."
+    - id: mentoring
+      tags: [management]
+      text: "Mentored two junior engineers through structured feedback and pair programming."
 
 - id: career-break-2025
   type: sabbatical
@@ -42,6 +46,9 @@
   promotions: null
   technologies: [nuxt, docker, postgres]
   highlights:
-    personal:
-      - "Contributed to two open source projects."
-      - "Built and launched a personal finance tracker as a side project."
+    - id: open-source
+      tags: [personal]
+      text: "Contributed to two open source projects."
+    - id: finance-tracker
+      tags: [personal]
+      text: "Built and launched a personal finance tracker as a side project."

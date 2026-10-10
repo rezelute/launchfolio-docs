@@ -1,70 +1,65 @@
 {
-  "$ref": "#/definitions/interests",
-  "definitions": {
-    "interests": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "icon": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "summary": {
+        "type": "string"
+      },
+      "url": {
+        "anyOf": [
+          {
+            "type": "string",
+            "format": "uri"
           },
-          "icon": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "summary": {
-            "type": "string"
-          },
-          "url": {
-            "anyOf": [
-              {
-                "type": "string",
-                "format": "uri"
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "relatedProjects": {
-            "anyOf": [
-              {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
-          "relatedBlogs": {
-            "anyOf": [
-              {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              {
-                "type": "null"
-              }
-            ]
+          {
+            "type": "null"
           }
-        },
-        "required": [
-          "id",
-          "icon",
-          "title",
-          "summary"
-        ],
-        "additionalProperties": false
+        ]
+      },
+      "relatedProjects": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "relatedBlogs": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          {
+            "type": "null"
+          }
+        ]
       }
-    }
-  },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "required": [
+      "id",
+      "icon",
+      "title",
+      "summary"
+    ],
+    "additionalProperties": false
+  }
 }
