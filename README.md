@@ -20,7 +20,7 @@ persona-data/
    experience.yaml    # work history
    interests.yaml     # personal interests shown on the home page
    projects.yaml      # your portfolio projects
-   cv-variants.yaml   # one or more tailored CV versions
+   cv.yaml            # optional - your public CV at /cv
    blogs/
       my-first-post.md
    img/
@@ -52,7 +52,7 @@ Full JSON schemas and example YAML files are in this repository:
 | `experience.yaml`  | [schemas/experience.json](schemas/experience.json)             | [examples/experience.yaml](examples/experience.yaml)             |
 | `interests.yaml`   | [schemas/interests.json](schemas/interests.json)               | [examples/interests.yaml](examples/interests.yaml)               |
 | `projects.yaml`    | [schemas/projects.json](schemas/projects.json)                 | [examples/projects.yaml](examples/projects.yaml)                 |
-| `cv-variants.yaml` | [schemas/cv-variants.json](schemas/cv-variants.json)           | [examples/cv-variants.yaml](examples/cv-variants.yaml)           |
+| `cv.yaml`          | [schemas/cv.json](schemas/cv.json)                             | [examples/cv.yaml](examples/cv.yaml)                             |
 | Blog frontmatter   | [schemas/blog-frontmatter.json](schemas/blog-frontmatter.json) | [examples/blog-frontmatter.yaml](examples/blog-frontmatter.yaml) |
 
 If your editor supports the [yaml-language-server](https://github.com/redhat-developer/yaml-language-server), add a schema comment to the top of each file for inline validation and autocompletion:
@@ -166,7 +166,50 @@ screenshots:
   - /img/projects/my-project/screenshot-1.webp
 ```
 
-No uploads or CDN required - images are served directly from your mounted volume.
+No uploads or CDN required - images are served directly from your mounted volume. Only images, PDFs and fonts are served - your YAML and Markdown files are never downloadable.
+
+---
+
+## CVs
+
+Launchfolio has two separate CV features.
+
+**Public CV (optional)** - add a `cv.yaml` to show a CV at `/cv`, linked in the footer. It picks entries and highlights from `experience.yaml` and `projects.yaml` by ID, so those files can hold far more than the CV shows. Only the picked highlights are ever sent to the browser. Leave the file out and there's no CV page. See [examples/cv.yaml](examples/cv.yaml).
+
+**CV builder** - go to `/cv/builder` (not linked anywhere) to make one-off CVs as PDFs, e.g. one per job application. Paste YAML or open a `.yaml` file, preview it, and click **Download PDF**. Everything is written in the YAML and nothing is stored or uploaded:
+
+```yaml
+header:
+  title: Frontend Engineer
+  tagline: "Vue/Nuxt specialist"
+  name: Jane Smith
+  details: [Cambridge, GB] # lines under your name
+sections:
+  - heading: Summary
+    text: "A paragraph of text."
+  - heading: Experience
+    items:
+      - title: My Company # the only required field
+        subtitle: Senior Developer
+        meta: Jan 2020 - Present # right-hand side
+        details: Cambridge, UK · Hybrid
+        text: "A short description."
+        bullets: ["An achievement."]
+        tags: [Vue, TypeScript]
+  - heading: Interests
+    tags: [Open Source, Nature]
+```
+
+Every section has a `heading` plus any mix of `text`, `items` and `tags`. All values are text - quote anything YAML would read as a number, e.g. `meta: "2026"`. Keep your CV files somewhere private, not in your persona-data directory.
+
+### Upgrading from cv-variants.yaml
+
+`cv-variants.yaml` has been replaced, and the server will now ignore it:
+
+1. To keep a public CV, copy one variant into a new `cv.yaml` and remove its `id` and `listed` lines. It's now served at `/cv` instead of `/cv/<id>`.
+2. Move any custom highlights (`{ id, text }` entries) into `experience.yaml` or `projects.yaml`, or into a builder CV - `cv.yaml` only accepts highlight IDs.
+3. For other variants, rebuild them as builder YAML files.
+4. Delete `cv-variants.yaml`.
 
 ---
 

@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rezelute/launchfolio-docs/main/schemas/cv.json
+
+# Optional - leave this file out and there's no /cv page or footer link.
+# Picks entries and highlights from experience.yaml and projects.yaml by id,
+# so those files can hold more than the CV shows.
+title: Full Stack Engineer
+tagline: "Full stack engineer across Vue, Nuxt, Node, and Postgres"
+summary: "Full stack engineer with 10+ years of experience building production web applications across the whole stack. Strong frontend bias with solid backend experience in Node and Postgres."
+sections:
+  - summary
+  - projects:
+      include:
+        - my-portfolio
+        - charity-dashboard: [accessibility]
+  - experience:
+      # A plain id shows all highlights; a list shows only those, in order
+      include:
+        - acme-corp: [dashboard-rebuild, mentoring]
+        - career-break-2025
+  - education
