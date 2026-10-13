@@ -21,63 +21,39 @@
         "type": "string"
       },
       "position": {
-        "anyOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "null"
-          }
+        "type": [
+          "string",
+          "null"
         ]
       },
       "location": {
-        "anyOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "null"
-          }
+        "type": [
+          "string",
+          "null"
         ]
       },
       "remote": {
-        "anyOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "null"
-          }
+        "type": [
+          "string",
+          "null"
         ]
       },
       "companySize": {
-        "anyOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "null"
-          }
+        "type": [
+          "string",
+          "null"
         ]
       },
       "companyType": {
-        "anyOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "null"
-          }
+        "type": [
+          "string",
+          "null"
         ]
       },
       "reasonForLeaving": {
-        "anyOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "null"
-          }
+        "type": [
+          "string",
+          "null"
         ]
       },
       "startDate": {

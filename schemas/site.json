@@ -45,13 +45,9 @@
       "type": "object",
       "properties": {
         "privacyNotice": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
+          "type": [
+            "string",
+            "null"
           ]
         },
         "tags": {

@@ -55,7 +55,29 @@
                                 {
                                   "type": "array",
                                   "items": {
-                                    "type": "string"
+                                    "anyOf": [
+                                      {
+                                        "type": "string"
+                                      },
+                                      {
+                                        "type": "object",
+                                        "properties": {
+                                          "id": {
+                                            "type": "string",
+                                            "minLength": 1
+                                          },
+                                          "text": {
+                                            "type": "string",
+                                            "minLength": 1
+                                          }
+                                        },
+                                        "required": [
+                                          "id",
+                                          "text"
+                                        ],
+                                        "additionalProperties": false
+                                      }
+                                    ]
                                   }
                                 },
                                 {
@@ -102,7 +124,29 @@
                                 {
                                   "type": "array",
                                   "items": {
-                                    "type": "string"
+                                    "anyOf": [
+                                      {
+                                        "type": "string"
+                                      },
+                                      {
+                                        "type": "object",
+                                        "properties": {
+                                          "id": {
+                                            "type": "string",
+                                            "minLength": 1
+                                          },
+                                          "text": {
+                                            "type": "string",
+                                            "minLength": 1
+                                          }
+                                        },
+                                        "required": [
+                                          "id",
+                                          "text"
+                                        ],
+                                        "additionalProperties": false
+                                      }
+                                    ]
                                   }
                                 },
                                 {

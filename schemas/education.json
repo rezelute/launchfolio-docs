@@ -20,23 +20,15 @@
         "type": "string"
       },
       "startDate": {
-        "anyOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "number"
-          }
+        "type": [
+          "string",
+          "number"
         ]
       },
       "endDate": {
-        "anyOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "number"
-          }
+        "type": [
+          "string",
+          "number"
         ]
       }
     },

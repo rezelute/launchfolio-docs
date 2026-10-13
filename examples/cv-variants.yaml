@@ -29,6 +29,12 @@
           - charity-dashboard: [accessibility]
     - experience:
         include:
-          - acme-corp: [dashboard-rebuild, component-library]
+          # Custom highlights ({ id, text }) can be mixed in with existing
+          # ids. They only show in this variant, not on the portfolio.
+          - acme-corp:
+              - dashboard-rebuild
+              - id: a11y-audit
+                text: "Ran an accessibility audit of the customer dashboard, fixing all WCAG AA issues."
+              - component-library
           - career-break-2025
     - education
